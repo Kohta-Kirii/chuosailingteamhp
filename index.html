@@ -3,116 +3,101 @@
     <head>
         <meta charset="UTF-8">
         <title>中央大学ヨット部</title>
-        <link rel="stylesheet" href="index.css">
+        <script src="https://kit.fontawesome.com/11668ca06b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <header>
-            <div class="header-logo"><img src="chuosailingteam.jpg"></div>
-            <ul class="header-navigation">
-                <li class="header-item"><a href="#">ヨット部について</a></li>
-                <li class="header-item"><a href="#">主将挨拶</a></li>
-                <li class="header-item"><a href="#">新歓・部員紹介</a></li>
-                <li class="header-item"><a href="#">お問い合わせ</a></li>
+            <img id="header-logo" src="img/chuologo.jpeg">
+            <ul id="header-navigation">
+                <li class="header-nav" id="header-about"><a class="header-item" href="#about">活動</a></li>
+                <li class="header-nav" id="header-greet"><a class="header-item" href="greet/greet.html">挨拶</a></li>
+                <li class="header-nav" id="header-freshman"><a class="header-item" href="member/member.html">部員紹介</a></li>
+                <li class="header-nav" id="header-access"><a class="header-item　btn btn--orange btn--cubic btn--shadow" href="contact/contact.html">お問い合わせ</a></li>
             </ul>
         </header>
-        <div class="content-wrapper">
-            <!--１ページ目-->
-            <div class="top-wrapper">
-                <div class="top-image">
-                    <div class="top-text">
-                        <h1>「責任を果たせ」</h1>
-                    </div>
+        <!--１ページ目-->
+        <div id="top-wrapper">
+            <div id="top-image">
+                <div id="top-text">
+                    <h1>「責任を果たせ」</h1>
                 </div>
             </div>
-            <!--2ページ目-->
-            <div class="about">
-                <div class="about-header">
-                    <h1>ヨット部について</h1>
-                </div>
-                <div class="about-content">
-                    <div class="about-item race">
-                        <div class="about-image">
-                            <img src="IMG_3235.jpeg" alt="">
-                        </div>
-                        <div class="about-text">
-                            <p>レース・インカレについて</p>
-                        </div>
-                    </div>
-                    <div class="about-item practice">
-                        <div class="about-image">
-                            <img src="IMG_3235.jpeg" alt="">
-                        </div>
-                        <div class="about-text">
-                            <p>練習環境について</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--3ページ目-->
-            <div class="dormitory">
-                <div class="dormitory-header">
-                    <h1>合宿所紹介</h1>
-                </div>
-                <div class="dormitory-content">
-                    <div class="dormitory-item mtr">
-                        <div class="dormitory-image">
-                            <img src="IMG_3235.jpeg" alt="">
-                        </div>
-                        <div class="dormitory-text">
-                            <p>ミーティングルーム</p>
-                        </div>
-                    </div>
-                    <div class="dormitory-item tr">
-                        <div class="dormitory-image">
-                            <img src="IMG_3235.jpeg" alt="">
-                        </div>
-                        <div class="dormitory-text">
-                            <p>トレーニングルーム</p>
-                        </div>
-                    </div>
-                    <div class="dormitory-item br">
-                        <div class="dormitory-image">
-                            <img src="IMG_3235.jpeg" alt="">
-                        </div>
-                        <div class="dormitory-text">
-                            <p>バスルーム</p>
-                        </div>
-                    </div>
-                    <div class="dormitory-item bh">
-                        <div class="dormitory-image">
-                            <img src="IMG_3235.jpeg" alt="">
-                        </div>
-                        <div class="dormitory-text">
-                            <p>ボートハウス</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--4ページ目-->
-            <div class="access">
-                <div class="access-header">
-                    <h1>アクセス</h1>
-                </div>
-                <div class="access-content">
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8587.995096300434!2d139.57087217746965!3d35.28317291213689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601846f91d23fc7d%3A0x1310078cc5676e98!2z5Lit5aSu5aSn5a2mIOiRieWxseWvrg!5e0!3m2!1sja!2sjp!4v1606395604857!5m2!1sja!2sjp" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                    <div class="access-how text">
-                        <p>JR横須賀線逗子駅からバス約10分</p>
-                        <ul>
-                            <li>中央大学ヨット部葉山合宿所</li>
-                            <li>住所:〒240-0012 神奈川県三浦郡葉山町堀内85</li>
-                            <li>電話番号:046-875-0009</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--フッター-->
-            <footer>
-                <div class="footer">
-                    <p>Copyright 2020 ChuoSailingTeam</p>
-                </div>
-            </footer>
-
         </div>
+        <!--2ページ目-->
+        <div id="about">
+            <h1 id="about-header">ヨット部について</h1>
+            <img  class ="image" id="image-race" src="img/aboutrece-min.JPG" alt="">
+            <div id="text-race">
+                <h2>レース・インカレについて</h2>
+                <p>内容内容内容内容内容内容内容内容内容内容内容</p>
+            </div>
+            <img class="image" id="image-practice" src="img/gasshukujo-min.jpg" alt="">
+            <div id="text-practice">
+                <h2>練習環境について</h2>
+                <p>内容内容内容内容内容内容内容内容内容内容内容</p>
+            </div>
+        </div>
+        <!--3ページ目-->
+        <div id="dormitory">
+            <div id="dormitory-header">
+                <h1>合宿所紹介</h1>
+            </div>
+            <div class="dormitory-item mtr">
+                <img class="dormitory-image" src="img/IMG_3235.jpeg" alt="">
+                <div class="dormitory-text">
+                    <p>ミーティングルーム</p>
+                </div>
+            </div>
+            <div class="dormitory-item tr">
+                <img class="dormitory-image" src="img/IMG_3235.jpeg" alt="">
+                <div class="dormitory-text">
+                    <p>トレーニングルーム</p>
+                </div>
+            </div>
+            <div class="dormitory-item br">
+                <img class="dormitory-image" src="img/huroba-min.jpg" alt="">
+                <div class="dormitory-text">
+                    <p>バスルーム</p>
+                </div>
+            </div>
+            <div class="dormitory-item bh">
+                <img class="dormitory-image" src="img/IMG_3235.jpeg" alt="">
+                <div class="dormitory-text">
+                    <p>ボートハウス</p>
+                </div>
+            </div>
+        </div>
+        <!--4ページ目-->
+        <div id="access">
+            <div id="access-header">
+                <h1>アクセス</h1>
+            </div>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8587.995096300434!2d139.57087217746965!3d35.28317291213689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601846f91d23fc7d%3A0x1310078cc5676e98!2z5Lit5aSu5aSn5a2mIOiRieWxseWvrg!5e0!3m2!1sja!2sjp!4v1606395604857!5m2!1sja!2sjp" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div id="adress">
+                <p>JR横須賀線逗子駅からバス約10分</p>
+                <p>中央大学ヨット部葉山合宿所</p>
+                <p>住所:〒240-0012 神奈川県三浦郡葉山町堀内85</p>
+                <p>電話番号:046-875-0009</p>
+            </div>
+        </div>
+        <!--フッター-->
+        <footer>
+            <div class="footer">
+                <p>Copyright 2020 ChuoSailingTeam</p>
+            </div>
+        </footer>
+        <!--フッターナビゲーション-->
+        <div id= "footer-navigation">
+            <ul class= "navigation-content">
+                <li class="nav" id= "about-team" ><i class="fas fa-home icon"></i><a class="footer-item" href="#about">活動</a></li>
+                <li class="nav" id= "captain" ><i class="far fa-hand-spock icon"></i><a class="footer-item" href="greet/greet.html">挨拶</a></li>
+                <li class="nav" id= "freshman" ><i class="fas fa-users icon"></i><a class="footer-item" href="member/member.html">部員紹介</a></li>
+                <li class="nav" id= "access-how" ><i class="fas fa-question-circle icon"></i><a class="footer-item" href="contact/contact.html">お問い合わせ</a></li>
+            </ul>
+        </div>
+
 
     </body>
 </html>
