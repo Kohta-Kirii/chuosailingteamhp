@@ -1,0 +1,462 @@
+*{
+    box-sizing:border-box
+}
+li{
+    list-style: none;
+}
+body{
+    margin:0;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto auto auto 600px 50px 70px ;
+    grid-template-areas: 
+    "header    "
+    "top       "
+    "about     "
+    "dormitory "
+    "access    "
+    "footer    "
+    "navigation";
+    background-color: #f8f9fc;
+}
+p{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333333;
+}
+h1{
+    font-size: 22px;
+    text-align: center;
+}
+h2, h3{
+    font-size: 20px;
+}
+/* ヘッダー*/
+header{
+    grid-area: header;
+    background-color:#f7b32d;
+    display:grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "logo";
+}
+#header-logo{
+    border-radius: 3px;
+    width:40%;
+    margin: auto;
+}
+#header-navigation{
+    display:none;
+}
+/*コンテンツ*/
+/*1ページ目*/
+#top-wrapper{
+    grid-area: top;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px;
+    grid-template-areas:
+    "top-image";
+}
+#top-image{
+    grid-area: top-image;
+    height:100%;
+    background-image:url("../img/chuosailingteam.jpg");
+    background-size:cover;
+    background-position: center;
+}
+#top-text{
+    height:100%;
+    background-color: rgba(0,0,0,0.4);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#top-text h1{
+    font-family: MS Mincho,Hiragino Mincho ProN;
+    font-size: 30px;
+    color: #f8f9fc;
+}
+/*2ページ目*/
+#about{
+    grid-area: about;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+    "header         "
+    "race-image     "
+    "race           "
+    "practice-image "
+    "practice       ";
+}
+#about h2{
+    padding-left: 2em;
+}
+#about p{
+    padding-left: 2em;
+    width: 20em;
+}
+#about-header{
+    grid-area: header;
+    margin: 50px 0 30px;
+}
+#image-race{
+    grid-area: race-image;
+}
+#text-race{
+    grid-area: race;
+    margin-bottom: 50px;
+}
+#image-practice{
+    grid-area: practice-image;
+}
+#text-practice{
+    grid-area: practice;
+    margin-bottom: 100px;
+}
+.image{
+    margin: auto;
+    width: 80%;
+
+}
+/*3ページ目*/
+#dormitory{
+    grid-area: dormitory;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px repeat(4, auto);
+    grid-template-areas:
+    "header "
+    "mtroom "
+    "troom  "
+    "broom  "
+    "bhouse ";
+    height:auto;
+}
+#dormitory-header{
+    grid-area: header;
+}
+.dormitory-item{
+    margin: auto;
+    padding: 10px;
+    height: 80%;
+    width: 80%;
+    border: 2px solid;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "dormitory-image dormitory-text"
+}
+.dormitory-image{
+    grid-area:dormitory-image;
+    width:80%;
+    margin: auto;
+    border-radius: 10px;
+}
+.dormitory-text{
+    grid-area:dormitory-text;
+    width: 100%;
+    text-align: center;
+    color:#f8f9fc;
+    margin: 0 auto;
+
+}
+.mtr{
+    grid-area: mtroom;
+    border-color:rgba(222, 60, 60,1);
+}
+.tr{
+    grid-area: troom;
+    border-color:rgba(247, 179, 45 ,1);
+}
+.br{
+    grid-area: broom;
+    border-color:rgba(222, 60, 60,1);
+}
+.bh{
+    grid-area: bhouse;
+    border-color:rgba(247, 179, 45 ,1);
+}
+/*4ページ目*/
+#access{
+    grid-area: access;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(auto, 300px) 0.5fr;
+    grid-template-areas:
+    "header"
+    "map   " 
+    "adress";
+}
+#access-header{
+    grid-area: header;
+    text-align: center;
+    margin-top: 100px;
+}
+#map{
+    grid-area: map;
+    width: 80%;
+    height: 30%;
+    margin: auto;
+}
+#adress{
+    grid-area: adress;
+    height:60%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* .text p,ul{
+    width:100%;
+    padding:0; 
+}  */
+/* フッダー */
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "copy-right";
+    height:50px;
+    background-color: #de3c3c;
+}
+.footer p{
+    grid-area:copy-right;
+    color:#f8f9fc;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+/* フッターナビゲーション */
+#footer-navigation{
+    grid-area: navigation;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    background-color: rgba(51, 51, 51,0.5);
+}
+.navigation-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70px;
+    grid-template-areas:
+    "about-team captain freshman access-how";
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+.footer-item:link, .footer-item:hover, .footer-item:visited, .footer-item:active{
+    text-decoration: none;
+    color:#f8f9fc;
+    font-size: 10px;
+}
+.footer-item{
+    display: block;
+    position: absolute;
+    border: solid;
+    border-style: none;
+    padding: 15% 15px 0;
+}
+#about-team{
+    grid-area:about-team;
+}
+#captain{
+    grid-area:captain;
+}
+#freshman{
+    grid-area:freshman;
+}
+#access-how{
+    grid-area:access-how;
+}
+.icon{
+    font-size:40px;
+    color: #f8f9fc;
+    position: relative;
+}
+.nav{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* レスポンシブ 　タブレット*/
+@media(min-width:600px){
+    p{
+        font-size: 18px;
+        line-height: 1.5;
+        color: #333333;
+    }
+    h1{
+        font-size: 31px;
+    }
+    h2, h3{
+        font-size: 24px;
+    }
+    body{
+        grid-template-rows: 50px 300px repeat(2, 1fr) 600px 50px 0px;
+    }
+    a{
+        text-decoration: none;
+    }
+    /* ヘッダー */
+    header{
+        position: fixed;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "logo header-navigation header-navigation header-navigation";
+    }
+    #header-navigation{
+        display: block;
+        grid-area: header-navigation;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px;
+        grid-template-areas:
+        "header-about header-greet header-freshman header-access";
+        padding: 16px 0 0 0;
+        margin: 0;
+    }
+    .header-item:link, .header-item:hover, .header-item:visited, .header-item:active{
+        text-decoration: none;
+        color:#333333;
+        font-size: 15px;
+    }
+    #header-logo{
+        width:70%;
+        margin: auto;
+    }
+    .header-nav{
+        text-align: center;
+    }
+    #header-about{
+        grid-area: header-about;
+    }
+    #header-greet{
+        grid-area: header-greet;
+    }
+    #header-freshman{
+        grid-area: header-freshman;
+    }
+    #header-access{
+        grid-area: header-access;    
+    }
+    a.btn--orange {
+        padding: 5px 10px;
+        color: #fff;
+        background-color: #de3c3c;
+        border-bottom: 5px solid #b84c00;
+    }
+    .btn--orange:hover {
+        margin-top: 3px;
+        color: #fff;
+        background: #de3c3c;
+        border-bottom: 2px solid #b84c00;
+    }
+    a.btn--shadow {
+        -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    }
+    /* 2ページ目 */
+    body{
+        grid-template-rows: 50px auto 1000px auto 600px 50px 70px ;
+    }
+    #about{
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 140px repeat(2, 400px) ;
+        grid-template-areas:
+        "header header          "
+        "race-image race        "
+        "practice-image practice";
+    }
+    #text-race{
+        height: 50%;
+        margin: 0;
+    }
+    .image{
+        margin: 0 auto;
+    }
+    /* 3ページ目 */
+    #dormitory{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 60px auto;
+        grid-template-areas:
+        "header header header header" 
+        "mtroom troom broom bhouse  "
+        ;
+    }
+    .dormitory-item{
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "dormitory-image"
+        "dormitory-text "
+    }
+    /* フッターナビゲーション */
+    #footer-navigation{
+        display: none;
+    }
+}
+/* レスポンシブ　pc */
+@media(min-width:1025px){
+    #top-wrapper{
+        grid-template-rows: 100%;
+    }
+    body{
+        grid-template-rows: 50px 600px repeat(2, 1fr) 600px 50px 0px ;
+    }
+    /* ヘッダー */
+    header{
+        width: 100%;
+    }
+    /* 2ページ目 */
+    #about{
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+    #about p{
+        width: 35em;
+    }
+    .image{
+        width: 50%;
+    }
+    /* 3ページ目 */
+    #dormitory{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas:
+        "header header header header"
+        "mtroom troom broom bhouse  ";
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .dormitory-item{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "dormitory-image"
+        "dormitory-text "
+    }
+    #access{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px auto;
+        grid-template-areas:
+        "header header"
+        "map adress   ";
+    }
+    #map{
+        width: 50%;
+        height: 50%;
+        margin: auto;
+    }
+    .dormitory-item{
+        height: auto;
+    }
+}

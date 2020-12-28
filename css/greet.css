@@ -1,0 +1,244 @@
+*{
+    box-sizing:border-box
+}
+li{
+    list-style: none;
+}
+p{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333333;
+}
+h1{
+    font-size: 22px;
+}
+h2, h3{
+    font-size: 20px;
+    padding-left: 2em;
+}
+body{
+    margin: 0;
+    background-color: #f8f9fc;
+}
+/* ヘッダー*/
+header{
+    grid-area: header;
+    background-color:#f7b32d;
+    display:grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "logo";
+}
+#header-logo{
+    border-radius: 3px;
+    width:40%;
+    margin: auto;
+}
+#header-navigation{
+    display:none;
+}
+/* １ページ目 */
+#greet-wrapper{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "greet-header"
+    "greet-img"
+    "greet-text"
+    ;
+}
+#greet-header{
+    grid-area: greet-header;
+    text-align: center;
+}
+#greet-img{
+    grid-area: greet-img;
+    width: 80%;
+    margin: 0 auto;
+}
+#greet-text{
+    grid-area: greet-text;
+}
+#greet-text p{
+    padding-left: 2em;
+    width: 20em;
+}
+#greet-status{
+    display:none;
+}
+/* フッダー */
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "copy-right";
+    height:50px;
+    background-color: #de3c3c;
+}
+.footer p{
+    grid-area:copy-right;
+    color:#f8f9fc;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+/* フッターナビゲーション */
+#footer-navigation{
+    grid-area: navigation;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    background-color: rgba(51, 51, 51,0.5);
+}
+.navigation-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70px;
+    grid-template-areas:
+    "about-team captain freshman access-how";
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+.footer-item:link, .footer-item:hover, .footer-item:visited, .footer-item:active{
+    text-decoration: none;
+    color:#f8f9fc;
+    font-size: 10px;
+}
+.footer-item{
+    display: block;
+    position: absolute;
+    border: solid;
+    border-style: none;
+    padding: 15% 15px 0;
+}
+#about-team{
+    grid-area:about-team;
+}
+#captain{
+    grid-area:captain;
+}
+#freshman{
+    grid-area:freshman;
+}
+#access-how{
+    grid-area:access-how;
+}
+.icon{
+    font-size:40px;
+    color: #f8f9fc;
+    position: relative;
+}
+.nav{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* レスポンシブ　タブレット */
+@media(min-width:600px){
+    p{
+        font-size: 18px;
+        line-height: 1.5;
+        color: #333333;
+    }
+    h1{
+        font-size: 31px;
+    }
+    h2, h3{
+        font-size: 24px;
+    }
+    a{
+        text-decoration: none;
+    }
+/* ヘッダー */
+#header-navigation{
+    display: block;
+}
+header{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "logo header-navigation header-navigation header-navigation";
+}
+#header-navigation{
+    grid-area: header-navigation;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "header-about header-greet header-freshman header-access";
+    padding: 0;
+}
+.header-item:link, .header-item:hover, .header-item:visited, .header-item:active{
+    text-decoration: none;
+    color:#333333;
+    font-size: 15px;
+}
+#header-logo{
+    width:70%;
+    margin: auto;
+}
+.header-nav{
+    text-align: center;
+}
+#header-about{
+    grid-area: header-about;
+}
+#header-greet{
+    grid-area: header-greet;
+}
+#header-freshman{
+    grid-area: header-freshman;
+}
+#header-access{
+    grid-area: header-access;    
+}
+a.btn--orange {
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #de3c3c;
+    border-bottom: 5px solid #b84c00;
+}
+.btn--orange:hover {
+    margin-top: 3px;
+    color: #fff;
+    background: #de3c3c;
+    border-bottom: 2px solid #b84c00;
+}
+a.btn--shadow {
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+/* コンテンツ */
+#greet-wrapper{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "greet-header greet-header"
+    "greet-img greet-status   "
+    "greet-text greet-text    "
+    ;
+}
+#greet-status{
+    grid-area: greet-status;
+    display:block;
+}
+#greet-text p{
+    width: 35em;
+}
+/* フッターナビゲーション */
+#footer-navigation{
+    display: none;
+} 
+.navigation-content{
+    grid-template-rows: 0px;
+
+}
+}
+/* レスポンシブ　pc */
+@media(min-width:1025px){
+    
+}

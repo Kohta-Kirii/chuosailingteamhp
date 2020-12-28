@@ -1,0 +1,423 @@
+*{
+    box-sizing:border-box
+}
+li{
+    list-style: none;
+}
+body{
+    margin: 0;
+    background-color: #f8f9fc;
+}
+p{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333333;
+}
+h1{
+    font-size: 22px;
+}
+h2, h3{
+    font-size: 20px;
+}
+/* ヘッダー*/
+header{
+    grid-area: header;
+    background-color:#f7b32d;
+    display:grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "logo";
+    width: 100%;
+}
+#header-logo{
+    border-radius: 3px;
+    width:40%;
+    margin: auto;
+}
+#header-navigation{
+    display:none;
+}
+/* アイキャッチ */
+#top-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px auto;
+    grid-template-areas:
+    "fresh-image"
+    "fresh-text ";
+}
+#fresh-image{
+    grid-area: fresh-image;
+    background-image: url(../img/shinkan-min.jpg);
+    background-size: cover;
+    background-position: center;
+    /* width: 100%; */
+    height: 100%;
+}
+#fresh-text{
+    grid-area: fresh-text;
+    text-align: center;
+}
+/* 未経験の皆様へ */
+#mid-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  repeat(4, auto);
+    grid-template-areas:
+    "mid-logo "
+    "general-1"
+    "general-2"
+    "general-3";
+}
+#mid-logo{
+    grid-area: mid-logo;
+    text-align: center;
+    margin-top: 50px;
+}
+#general-1{
+    grid-area: general-1;
+}
+#general-2{
+    grid-area: general-2;
+}
+#general-3{
+    grid-area: general-3;
+}
+.general-image{
+    width: 80%;
+    display: block;
+    margin: 50px auto 10px;
+}
+.general p{
+    margin: 0 auto;
+    width: 20em;
+}
+.general h2{
+    padding-left: 2em;
+}
+.general h3{
+    padding-left: 1em;
+}
+/* 部員紹介 */
+#member-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  repeat(19, auto);
+    grid-template-areas:
+    "member-logo  "
+    "yonenn       "
+    "member-item1 "
+    "member-item2 "
+    "member-item3 "
+    "member-item4 "
+    "member-item5 "
+    "member-item6 "
+    "sannnenn     "
+    "member-item7 "
+    "member-item8 "
+    "member-item9 "
+    "member-item10"
+    "ninenn       "
+    "member-item11"
+    "member-item12"
+    "member-item13"
+    "member-item14"
+    "itinenn      ";
+}
+#member-logo{
+    grid-area: member-logo;
+    text-align: center;
+    margin-top: 100px;
+}
+.member-item img{
+    width: 90%;
+    display: block;
+    margin:0 auto;
+}
+.member-item h2{
+    padding-left: 1em;
+}
+.member-item p{
+    padding-left: 2em;
+    width: 20em;
+}
+.grade{
+    margin-bottom: 40px;
+}
+#yonenn{
+    text-align: center;
+    grid-area: yonenn;
+}
+#sannnenn{
+    text-align: center;
+    margin-top: 50px;
+    grid-area: sannnenn;
+}
+#ninenn{
+    text-align: center;
+    margin-top: 50px;
+    grid-area: ninenn;
+}
+#itinenn{
+    text-align: center;
+    margin-top: 50px;
+    grid-area: itinenn;
+}
+#member-item1{
+    grid-area: member-item1;
+}
+#member-item2{
+    grid-area: member-item2;
+}
+#member-item3{
+    grid-area: member-item3;
+}
+#member-item4{
+    grid-area: member-item4;
+}
+#member-item5{
+    grid-area: member-item5;
+}
+#member-item6{
+    grid-area: member-item6;
+}
+#member-item7{
+    grid-area: member-item7;
+}
+#member-item8{
+    grid-area: member-item8;
+}
+#member-item9{
+    grid-area: member-item9;
+}
+#member-item10{
+    grid-area: member-item10;
+}
+#member-item11{
+    grid-area: member-item11;
+}
+#member-item12{
+    grid-area: member-item12;
+}
+#member-item13{
+    grid-area: member-item13;
+}
+#member-item14{
+    grid-area: member-item14;
+}
+/* フッダー */
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "copy-right";
+    height:50px;
+    background-color: #de3c3c;
+}
+.footer p{
+    grid-area:copy-right;
+    color:#f8f9fc;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+/* フッターナビゲーション */
+#footer-navigation{
+    grid-area: navigation;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    background-color: rgba(51, 51, 51,0.5);
+}
+.navigation-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70px;
+    grid-template-areas:
+    "about-team captain freshman access-how";
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+.footer-item:link, .footer-item:hover, .footer-item:visited, .footer-item:active{
+    text-decoration: none;
+    color:#f8f9fc;
+    font-size: 10px;
+}
+.footer-item{
+    display: block;
+    position: absolute;
+    border: solid;
+    border-style: none;
+    padding: 15% 15px 0;
+}
+#about-team{
+    grid-area:about-team;
+}
+#captain{
+    grid-area:captain;
+}
+#freshman{
+    grid-area:freshman;
+}
+#access-how{
+    grid-area:access-how;
+}
+.icon{
+    font-size:40px;
+    color: #f8f9fc;
+    position: relative;
+}
+.nav{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* レスポンシブ　タブレット */
+@media(min-width:600px){
+    p{
+        font-size: 18px;
+        line-height: 1.5;
+        color: #333333;
+    }
+    h1{
+        font-size: 31px;
+    }
+    h2, h3{
+        font-size: 24px;
+    }
+    a{
+        text-decoration: none;
+    }
+/* ヘッダー */
+
+header{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "logo header-navigation header-navigation header-navigation";
+    position: fixed;
+}
+#header-navigation{
+    display: block;
+    grid-area: header-navigation;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "header-about header-greet header-freshman header-access";
+    padding: 0;
+}
+.header-item:link, .header-item:hover, .header-item:visited, .header-item:active{
+    text-decoration: none;
+    color:#333333;
+    font-size: 15px;
+}
+#header-logo{
+    width:70%;
+    margin: auto;
+}
+.header-nav{
+    text-align: center;
+}
+#header-about{
+    grid-area: header-about;
+}
+#header-greet{
+    grid-area: header-greet;
+}
+#header-freshman{
+    grid-area: header-freshman;
+}
+#header-access{
+    grid-area: header-access;    
+}
+a.btn--orange {
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #de3c3c;
+    border-bottom: 5px solid #b84c00;
+}
+.btn--orange:hover {
+    margin-top: 3px;
+    color: #fff;
+    background: #de3c3c;
+    border-bottom: 2px solid #b84c00;
+}
+a.btn--shadow {
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+/* 未経験の皆様へ */
+.general{
+    display: flex;
+    flex-direction: column;
+}
+.general img{
+    width: 50%;
+    margin: 100px auto 10px;
+}
+.general p{
+    width: 35em;
+}
+.general h2{
+    padding-left: 3em;
+}
+.general h3{
+    padding-left: 3em;
+}
+/* 部員紹介 */
+#member-wrapper{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(12, auto);
+    grid-template-areas:
+    "member-logo member-logo    "
+    "yonenn yonenn              "
+    "member-item1 member-item2  "
+    "member-item3 member-item4  "
+    "member-item5 member-item6  "
+    "sannnenn sannnenn          "
+    "member-item7 member-item8  "
+    "member-item9 member-item10 "
+    "ninenn ninenn              "
+    "member-item11 member-item12"
+    "member-item13 member-item14"
+    "itinenn itinenn            ";
+}
+/* フッターナビゲーション */
+#footer-navigation{
+    display: none;
+} 
+}
+/* レスポンシブ　pc */
+@media(min-width:1025px){
+    /* 未経験の方へ */
+    .general {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .general p{
+    }
+    /* 部員紹介 */
+    #member-wrapper{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(11, auto);
+        grid-template-areas:
+        "member-logo member-logo member-logo       "
+        "yonenn yonenn yonenn                      "
+        "member-item1 member-item2 member-item3    "
+        "member-item4 member-item5 member-item6    "
+        "sannnenn sannnenn sannnenn                "
+        "member-item7 member-item8 member-item9    "
+        "member-item10 ... ...                     "
+        "ninenn ninenn ninenn                      "
+        "member-item11 member-item12 member-item13 "
+        "member-item14... ...                      "
+        "itinenn itinenn itinenn                   ";
+        max-width: 1060px;
+        margin: 0 auto;
+    }
+}
